@@ -63,7 +63,7 @@ DISTRO=fsl-imx-xwayland MACHINE=imx8mpevk source imx-setup-release.sh -b buildxw
 ```
 ![BSP Environment setting](images/0-4.png "BSP Environment setting")
 ![Press y](images/3-1.png "Press y")
-### Setting for MIPI camera
+### Setting for pylon and MIPI camera
 yocto-project-name/buildxwayland/conf/bblayers.conf 檔內加入以下參數.
 ```
 BBLAYERS += "${BSPDIR}/sources/meta-basler-imx8"
