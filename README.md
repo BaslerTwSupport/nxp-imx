@@ -70,6 +70,7 @@ BBLAYERS += "${BSPDIR}/sources/meta-basler-imx8"
 BBLAYERS += "${BSPDIR}/sources/meta-basler-tools"
 ``` 
 ![bblayers](images/15-1.png "bblayers")
+
 yocto-project-name/buildxwayland/conf/local.conf 檔內加入以下參數.
 ```
 ACCEPT_BASLER_EULA = "1"
@@ -110,6 +111,7 @@ bitbake gstreamer1.0 -c compile
 ![name](images/10.png "name")
 ### Yocto BSP 燒錄方式
 若已熟悉 Windows 與 Ubuntu 檔案之間的交握方式可略過此步驟.
+
 在 Ubuntu 內下指令, 複製 wic.zst 與 bin-flash_evk 檔至其他位置, 避免手誤刪除.
 ```
 cd < anywhere >
@@ -117,13 +119,18 @@ cp --recursive yocto-project-name/buildxwayland/tmp/deploy/images/imx8mpevk/*.wi
 cp --recursive yocto-project-name/buildxwayland/tmp/deploy/images/imx8mpevk/imx-boot-*.bin-flash_evk ./
 ```
 ![images](images/17.png "images")
+
 再透過其他方式將上圖檔案移動到 Windows, SCP, PSFTP, USB隨身碟.
 
 #### 燒錄至eMMC
 確認Boot Switch 開關撥片位置是否正確, 因要燒錄至eMMC, 斷電後調整至Serial Download `0001` .
+
 ![images](https://edit.wpgdadawant.com/uploads/news_file/blog/2023/12240/tinymce/bootmode-2.png "images")
+
 下載 [UUU.exe](https://github.com/nxp-imx/mfgtools/releases) 並放置於與wic.zst & bin-flash_evk 檔同個路徑下
+
 ![UUU](images/19.png "UUU")
+
 打開 PowerShell 執行指令.
 ```
 cd < yocto images folder >
@@ -135,6 +142,7 @@ iMX8MP啟動後, 輸入指令確認是否有連接成功.
 .\uuu.exe -lusb
 ```
 ![usb](images/22-1.png "usb") 
+
 確認連接成功後執行指令開始燒錄.
 ```
 .\uuu.exe -b emmc_all imx-boot-imx8mpevk-sd.bin-flash_evk imx-image-multimedia-imx8mpevk.wic.zst
@@ -150,8 +158,12 @@ pylon
 
 ## Referenc link
 [【ATU Book - i.MX8系列 - OS】NXP i.MX Linux BSP 開發環境架設](https://www.wpgdadatong.com/blog/detail/74061)
+
 [【ATU Book-i.MX8系列】 UUU（Universal Update Utility）](https://www.wpgdadatong.com/blog/detail/41709)
+
 [meta-basler-tools](https://github.com/basler/meta-basler-tools)
+
 [meta-basler-imx8](https://github.com/basler/meta-basler-imx8)
+
 [How to set up camera Dart BCON Basler for iMX8MPlus on Embedded Linux](https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/How-to-set-up-camera-Dart-BCON-Basler-for-iMX8MPlus-on-Embedded/ta-p/1653408)
 
