@@ -156,6 +156,16 @@ pylon
 ![MIPI](images/24.png "MIPI") 
 ![USB](images/25.png "USB") 
 
+#### 燒錄至SD
+Ubuntu 透過指令解壓縮.
+```
+zstd -d imx-image-multimedia-imx8mpevk.wic.zst
+```
+
+Windows 則需透過 [7-Zip-zstd](https://github.com/mcmilk/7-Zip-zstd/releases/) 解壓縮.
+
+將 wic 檔複製到 Windows, 再將 SD 卡插入電腦後, 使用 rufus 進行燒錄, 如同燒錄開機碟一樣.
+
 ## Referenc link
 [【ATU Book - i.MX8系列 - OS】NXP i.MX Linux BSP 開發環境架設](https://www.wpgdadatong.com/blog/detail/74061)
 
