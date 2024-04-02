@@ -139,7 +139,7 @@ cd < yocto images folder >
 ![UUU](images/21.png "UUU") 
 iMX8MP啟動後, 輸入指令確認是否有連接成功.
 ```
-.\uuu.exe -lusb
+.\uuu.exe -lsusb
 ```
 ![usb](images/22-1.png "usb") 
 
