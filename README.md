@@ -177,3 +177,5 @@ Windows 則需透過 [7-Zip-zstd](https://github.com/mcmilk/7-Zip-zstd/releases/
 
 [How to set up camera Dart BCON Basler for iMX8MPlus on Embedded Linux](https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/How-to-set-up-camera-Dart-BCON-Basler-for-iMX8MPlus-on-Embedded/ta-p/1653408)
 
+## Support
+If you still have any questions please contact [Balser Support](https://www.baslerweb.com/en-us/support/contact/)
